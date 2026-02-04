@@ -1,0 +1,19 @@
+public class SixtyNineCharmItem extends Item {
+    public SixtyNineCharmItem() {
+        super(new Item.Properties().stacksTo(1));
+    }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        if (!level.isClientSide) {
+            player.addEffect(new MobEffectInstance(MobEffects.LUCK, 20 * 69, 0));
+            player.add
+public static final DeferredRegister<Item> ITEMS =
+        DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+
+public static final RegistryObject<Item> SIXTY_NINE_CHARM =
+        ITEMS.register("69_charm", SixtyNineCharmItem::new);
+@Override
+public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+    tooltip.add(Component.literal("Nice.").withStyle(ChatFormatting.LIGHT_PURPLE))}
+}
